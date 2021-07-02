@@ -51,7 +51,7 @@
 
     <script type="text/javascript">
 
-        Echo.channel('chatting').listen('NewMessageEvent',e=>{
+        window.Echo.channel('chatting').listen('NewMessageEvent',e=>{
 
             let myhtml="<div class='alert alert-secondary' role='alert'>"+
                             "<strong>"+ "JARVIS" +"</strong> <br/>"+
