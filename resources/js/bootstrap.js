@@ -27,12 +27,21 @@ window.Echo = new Echo({
     // forceTLS: false,
     // // wsHost:window.location.hostname,
     // // wsPort:6001,
+
+    // broadcaster: 'pusher',
+    // key: process.env.MIX_PUSHER_APP_KEY,
+    // wsHost: window.location.hostname,
+    // wsPort: 443,
+    // forceTLS: false,
+    // disableStats: true,
+    // enabledTransports:['ws','wws']
     broadcaster: 'pusher',
     key: process.env.MIX_PUSHER_APP_KEY,
-    wsHost: window.location.hostname,
-    wsPort: 443,
+    cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+    wsHost: process.env.MIX_PUSHER_HOST,
+    wsPort: 6001,
     forceTLS: false,
     disableStats: true,
-    enabledTransports:['ws','wws']
+    scheme: process.env.MIX_PUSHER_SCHEME
 
 });

@@ -1877,12 +1877,21 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__.default({
   // forceTLS: false,
   // // wsHost:window.location.hostname,
   // // wsPort:6001,
+  // broadcaster: 'pusher',
+  // key: process.env.MIX_PUSHER_APP_KEY,
+  // wsHost: window.location.hostname,
+  // wsPort: 443,
+  // forceTLS: false,
+  // disableStats: true,
+  // enabledTransports:['ws','wws']
   broadcaster: 'pusher',
   key: "pusherKey42",
-  wsHost: window.location.hostname,
+  cluster: "mt1",
+  wsHost: "127.0.0.1",
   wsPort: 6001,
   forceTLS: false,
-  disableStats: true
+  disableStats: true,
+  scheme: "http"
 });
 
 /***/ }),
